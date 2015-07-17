@@ -8,6 +8,4 @@
     <script src="http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js"></script>
 </head>
 <body>
-    12344
-</body>
-</html>
+
