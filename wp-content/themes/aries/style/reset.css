@@ -1,0 +1,49 @@
+html, body, div, p, span, img, a, h1, h2, h3, h4, h5, h6, ul, li, dl, dt,
+dd, form, input, select, textarea, fieldset, legend, table, tr, th, td {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+html{
+  width: 100%;
+}
+body {
+    font-size: 12px;
+    font-family: Arial, Hiragino Sans GB, Microsoft YaHei, SimSun;
+    color: #212121;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+ul {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+    outline: none;
+    color: inherit;
+}
+:focus {
+    outline: none;
+}
+input, button, textarea,
+select, optgroup, option {
+    font-weight: normal;
+    font-family: inherit;
+    font-size: inherit;
+    font-style: inherit;
+}
+input, button, textarea,
+select, optgroup, option {
+    *font-size: 100%;   //此种写法是为了支持老版本的IE
+}
+.clear {
+    clear: both;
+    width: 0;
+    height: 0;
+    line-height: 0;
+}
+iframe {
+    display: block;
+}
