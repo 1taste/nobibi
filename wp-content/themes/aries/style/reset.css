@@ -4,11 +4,8 @@ dd, form, input, select, textarea, fieldset, legend, table, tr, th, td {
     margin: 0;
     border: 0;
 }
-html{
-  width: 100%;
-}
 body {
-    font-size: 12px;
+    font-size: 15px;
     font-family: Arial, Hiragino Sans GB, Microsoft YaHei, SimSun;
     color: #212121;
 }
