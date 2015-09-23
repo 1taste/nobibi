@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html id="page-home">
 <head>
 <?php
     get_header();
@@ -17,10 +17,6 @@
 </head>
 <body>
 <?php get_template_part('nav')?>
-
-<?php
-    wp_nav_menu(array('theme_location' => 'top-menu', 'menu_id' => 'topnav','container_class' => 'primary'));
-?>
 
 </body>
 </html>
