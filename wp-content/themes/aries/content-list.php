@@ -8,8 +8,14 @@ Template Name:content-list
     <div class="p-title">
         <p class="p-title-text"><?php the_title()?></p>
         <p class="p-title-info">
-            <span><?php the_author()?></span>
-            <span><?php the_date();the_time();?></span>
+            <span><?php the_author()?>&nbsp;发表于</span>
+            <span>
+                <?php
+                 the_date();
+                 echo '&nbsp;';
+                 the_time();
+                ?>
+            </span>
         </p>
     </div>
     <?php if (has_post_thumbnail()) {the_post_thumbnail();}?>
@@ -19,7 +25,7 @@ Template Name:content-list
     </p>
 
     <div class="p-go">
-        <a href="blog-single.html">继续阅读</a>
+        <a href="<?php echo get_permalink()?>">继续阅读</a>
         <span>浏览数<?php post_views();?>|评论数<?php echo $post->comment_count ?></span>
     </div>
 </li>

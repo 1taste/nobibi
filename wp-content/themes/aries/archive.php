@@ -1,12 +1,7 @@
-<?php
-/*
-Template Name:blog
-*/
-?>
 <!DOCTYPE html>
 <html id="page-blog">
 <head>
-<?php
+    <?php
     get_header();
 ?>
 </head>
@@ -19,7 +14,6 @@ Template Name:blog
     <div id="cont-left">
         <ul id="blog-list">
             <?php
-            query_posts( 'posts_per_page=5' );
             if ( have_posts() ):
                 while ( have_posts() ) : the_post();
                     get_template_part('content', 'list');

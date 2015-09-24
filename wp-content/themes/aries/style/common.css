@@ -39,15 +39,15 @@
     display: block;
     height: 27px;
 }
-#nav li a#nav-one {
+#nav li a#nav-home {
     width: 72px;
     background: url("../images/nav-one.png") no-repeat;
 }
-#nav li a#nav-two {
+#nav li a#nav-blog {
     width: 55px;
     background: url("../images/nav-two.png") no-repeat;
 }
-#nav li a#nav-three {
+#nav li a#nav-about {
     width: 76px;
     background: url("../images/nav-three.png") no-repeat;
 }
@@ -189,7 +189,23 @@
     border-top:1px solid #ddd;
     text-align: center;
 }
+#to-top {
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    width: 58px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.45);
+    background-color: #7d5c99;
+    background-image: url("../images/to-top.png");
+    background-repeat: no-repeat;
+    overflow: hidden;
+    cursor: pointer;
+}
+#to-top:hover {
 
+}
 
 
 
@@ -222,6 +238,7 @@
     padding-top: 4px;
     color: #757575;
     line-height: 26px;
+    text-align: justify;
 }
 .p-go {
     padding-top: 10px;
@@ -237,8 +254,10 @@
     letter-spacing: 1px;
 }
 .p-text p {
-    margin-top: 15px;
-    line-height: 24px;
+    margin-top: 10px;
+    line-height: 26px;
+    color: #212121;
+    text-align: justify;
 }
 .p-updown {
     background: #f5f5f5;
@@ -251,20 +270,11 @@
     font-size: 16px;
     padding-right: 20px;
 }
-.p-share {
-    height: 34px;
-    padding: 20px 0;
-}
-.p-share img {
-    height: 34px;
-    width: 34px;
-    margin-right: 20px;
-}
 .p-comment {
     overflow: hidden;
 }
 .p-comment-title {
-    padding-bottom: 10px;
+    padding: 15px 0;
 }
 .p-comment  textarea {
     width: 680px;
@@ -285,10 +295,22 @@
     padding: 5px 28px;
     margin-top: 10px;
 }
-.comment-list {
+.p-commentlist {
     padding-bottom: 40px;
 }
-.comment-list li {
+.p-commentlist li {
     border-bottom: 1px dashed #d5d5d5;
     padding: 20px 0;
+    overflow: hidden;
+}
+.comment-img {
+    width: 40px;
+    height: 40px;
+    float: left;
+    background: url("../images/comment.png") no-repeat;
+}
+.comment-history{
+    margin-left: 20px;
+    float: left;
+    padding-top: 2px;
 }

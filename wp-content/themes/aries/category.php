@@ -1,12 +1,7 @@
-<?php
-/*
-Template Name:blog
-*/
-?>
 <!DOCTYPE html>
 <html id="page-blog">
 <head>
-<?php
+    <?php
     get_header();
 ?>
 </head>
@@ -19,17 +14,20 @@ Template Name:blog
     <div id="cont-left">
         <ul id="blog-list">
             <?php
-            query_posts( 'posts_per_page=5' );
             if ( have_posts() ):
                 while ( have_posts() ) : the_post();
                     get_template_part('content', 'list');
                 endwhile;
+
+                the_posts_pagination( array(
+				'prev_text'          => __( 'Previous page', 'twentyfifteen' ),
+                'next_text'          => __( 'Next page', 'twentyfifteen' ),
+                'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'twentyfifteen' ) . ' </span>',
+            ) );
             endif;
          ?>
         </ul>
-        <div id="more-wrap">
-            <a id="more">浏览更多...</a>
-        </div>
+
     </div>
     <?php get_sidebar()?>
 </div>
