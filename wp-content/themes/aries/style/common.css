@@ -129,39 +129,20 @@
     background: url("../images/class-title.png") no-repeat;
 }
 #blog-class #class-ul {
-    padding-top: 10px;
     overflow: hidden;
 }
 #blog-class #class-ul li {
-    float: left;
-    width: 155px;
-    height: 38px;
-    margin: 10px 0;
-    box-sizing: border-box;
+    height: 52px;
     text-align: left;
-}
-#blog-class #class-ul li:nth-child(even) {
-    text-align: right;
+    border-bottom: 1px solid #f5f5f5;
 }
 #blog-class #class-ul li a {
-    display: inline-block;
     width: 140px;
-    height: 38px;
-    text-align: center;
-    line-height: 38px;
-    color: #fff;
+    height: 52px;
+    line-height: 52px;
+    color: #757575;
     font-size: 16px;
     letter-spacing: 1px;
-    border-radius: 3px;
-
-    background-color: #7bcacd;
-    background-image: -moz-linear-gradient(left, #48cebb, #00bfc0);
-    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#48cebb), to(#00bfc0));
-    background-image: -webkit-linear-gradient(left, #48cebb, #00bfc0);
-    background-image: -o-linear-gradient(left, #48cebb, #00bfc0);
-    background-image: linear-gradient(to right, #48cebb, #00bfc0);
-    background-repeat: repeat-x;
-    filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#48cebb,endcolorstr=#00bfc0,gradientType=1);
 }
 #more-wrap {
     position: relative;
