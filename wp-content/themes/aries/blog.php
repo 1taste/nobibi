@@ -14,22 +14,25 @@ Template Name:blog
 <?php
     get_template_part('nav');
 ?>
-
 <div class="middle">
     <div id="cont-left">
         <ul id="blog-list">
             <?php
-            query_posts( 'posts_per_page=5' );
+            $pageNum = $_GET['paged'];
+            query_posts( 'posts_per_page=5&paged='.$pageNum);
             if ( have_posts() ):
                 while ( have_posts() ) : the_post();
                     get_template_part('content', 'list');
                 endwhile;
+
+                the_posts_pagination( array(
+				    'prev_text'          => 'Prev',
+                    'next_text'          => 'Next'
+                ) );
             endif;
          ?>
         </ul>
-        <div id="more-wrap">
-            <a id="more">浏览更多...</a>
-        </div>
+
     </div>
     <?php get_sidebar()?>
 </div>

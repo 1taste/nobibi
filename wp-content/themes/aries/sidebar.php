@@ -11,7 +11,7 @@
                     'hide_empty'   => 0
                 ));
                 foreach($categories as $category) {
-                    echo '<li><a href="'.get_category_link($category->term_id).'">'.$category->name.'</a></li>';
+                    echo '<li><a href="'.get_category_link($category->term_id).'">'.$category->name.'('.$category->count.')</a></li>';
                 }
             ?>
         </ul>
