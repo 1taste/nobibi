@@ -296,3 +296,34 @@
     float: left;
     padding-top: 2px;
 }
+
+/**********分页***********/
+.pagination {
+    margin-bottom: 20px;
+}
+.screen-reader-text {
+    display: none;
+}
+.nav-links {
+    overflow: hidden;
+}
+.nav-links .page-numbers {
+    display: none;
+}
+.nav-links .prev.page-numbers,
+.nav-links .next.page-numbers{
+    display: inline-block;
+    line-height: 36px;
+    height: 36px;
+    width: 120px;
+    background-color: #9c27b0;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 14px;
+}
+.nav-links .next {
+    float: left;
+}
+.nav-links .next {
+    float: right;
+}
