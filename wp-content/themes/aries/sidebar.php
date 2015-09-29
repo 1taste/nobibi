@@ -1,7 +1,9 @@
 <div id="cont-right">
     <div id="search">
-        <input type="text" placeholder="查找文章">
-        <span id="search-dec"></span>
+        <form action="<?php echo home_url('/');?>" method="get" id="searchForm">
+            <input type="text" placeholder="查找文章" name="s" >
+            <span id="search-dec"></span>
+        </form>
     </div>
     <div id="blog-class">
         <div id="class-title"></div>
@@ -17,4 +19,8 @@
         </ul>
     </div>
 </div>
-
+<script>
+    $('#search-dec').click(function () {
+        document.getElementById('searchForm').submit();
+    });
+</script>
