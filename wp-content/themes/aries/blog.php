@@ -21,14 +21,14 @@ Template Name:blog
             $pageNum = $_GET['paged'];
             query_posts( 'posts_per_page=5&paged='.$pageNum);
             if ( have_posts() ):
-                while ( have_posts() ) : the_post();
-                    get_template_part('content', 'list');
-                endwhile;
+            while ( have_posts() ) : the_post();
+            get_template_part('content', 'list');
+            endwhile;
 
-                the_posts_pagination( array(
-				    'prev_text'          => 'Prev',
-                    'next_text'          => 'Next'
-                ) );
+            the_posts_pagination( array(
+            'prev_text'          => 'Prev',
+            'next_text'          => 'Next'
+            ) );
             endif;
          ?>
         </ul>

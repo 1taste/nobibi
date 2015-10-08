@@ -6,7 +6,7 @@ Template Name:content-list
 
 <li>
     <div class="p-title">
-        <p class="p-title-text"><?php the_title()?></p>
+        <p class="p-title-text"><a href="<?php echo get_permalink()?>"><?php the_title()?></a></p>
         <p class="p-title-info">
             <span><?php the_author()?>&nbsp;发表于</span>
             <span>
