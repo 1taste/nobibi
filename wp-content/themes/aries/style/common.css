@@ -24,54 +24,38 @@
     float: left;
     width: 162px;
     height: 130px;
-    background: url("../images/logo.png");
+    background-image: url("../images/logo.png");
     background-repeat: no-repeat;
 }
 #nav{
     float: right;
     height: 80px;
     box-sizing: border-box;
-    padding-top: 32px;
+    margin-right: -42px;
+    padding-top: 28px;
 }
 #nav li {
     float: left;
-    margin-left: 88px;
 }
 #nav li a {
     display: block;
-    height: 27px;
+    font-size: 24px;
+    height: 46px;
+    line-height: 46px;
+    width: 160px;
+    text-align: center;
 }
 #nav li a#nav-home {
-    width: 72px;
-    background: url("../images/nav-one.png") no-repeat;
+    background-image: url("../images/nav-home.png");
+    background-repeat: no-repeat;
 }
 #nav li a#nav-blog {
-    width: 55px;
-    background: url("../images/nav-two.png") no-repeat;
+    background-image: url("../images/nav-blog.png");
+    background-repeat: no-repeat;
 }
 #nav li a#nav-about {
-    width: 76px;
-    background: url("../images/nav-three.png") no-repeat;
-}
-#nav li span {
-    display: block;
-    width: 0;
-    height: 2px;
-    background: #1369BF;
-    transition: width 0.3s;
-    -moz-transition: width 0.3s;	/* Firefox 4 */
-    -webkit-transition: width 0.3s;	/* Safari 和 Chrome */
-    -o-transition: width 0.3s;
-}
-#nav li span.selected {
-    width: 100%;
-}
-#nav li:hover span {
-    width: 100%;
-    transition: width 0.3s;
-    -moz-transition: width 0.3s;	/* Firefox 4 */
-    -webkit-transition: width 0.3s;	/* Safari 和 Chrome */
-    -o-transition: width 0.3s;
+    background-image: url("../images/nav-about.png");
+    background-repeat: no-repeat;
 }
 .middle {
     margin: 0 auto;
