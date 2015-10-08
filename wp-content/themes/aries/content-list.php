@@ -26,6 +26,6 @@ Template Name:content-list
 
     <div class="p-go">
         <a href="<?php echo get_permalink()?>">继续阅读</a>
-        <span>浏览数<?php post_views();?>|评论数<?php echo $post->comment_count ?></span>
+        <span><i class="iconfont icon-yulan"></i><?php post_views();?>&nbsp;&nbsp;<i class="iconfont icon-pinglun"></i><?php echo $post->comment_count ?></span>
     </div>
 </li>

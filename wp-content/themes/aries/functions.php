@@ -1,5 +1,14 @@
-
 <?php
+
+show_admin_bar(false);
+remove_action('wp_head', 'wp_generator' ); //去除版本信息
+remove_action('wp_head', 'wlwmanifest_link' );
+remove_action('wp_head', 'rsd_link' );//清除离线编辑器接口
+remove_action('wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0 );//清除前后文信息
+remove_action('wp_head', 'feed_links',2 );
+remove_action('wp_head', 'feed_links_extra',3 );//清除feed信息
+remove_action('wp_head', 'wp_shortlink_wp_head',10,0 );
+
 //注册菜单
 register_nav_menus( array(
 'top-menu' => 'nobibi top menu'
