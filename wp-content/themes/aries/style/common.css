@@ -36,14 +36,14 @@
 }
 #nav li {
     float: left;
+    border-radius: 4px;
+    overflow: hidden;
 }
 #nav li a {
     display: block;
     font-size: 24px;
     height: 46px;
-    line-height: 46px;
     width: 160px;
-    text-align: center;
 }
 #nav li a#nav-home {
     background-image: url("../images/nav-home.png");
@@ -81,7 +81,7 @@
 #search {
     width: 310px;
     height: 50px;
-    border: 2px solid #9937c7;
+    border: 1px solid #555;
     box-sizing: border-box;
     position: absolute;
     top: -52px;
@@ -95,7 +95,7 @@
     padding: 6px 10px;
     line-height: 46px;
     font-size: 18px;
-    color: #9937c7;
+    color: #555;
 }
 #search-dec {
     float: left;
@@ -110,7 +110,7 @@
 #blog-class #class-title {
     margin-top: 4px;
     height: 67px;
-    border-bottom: 2px solid #9937c7;
+    border-bottom: 1px solid #9937c7;
     background: url("../images/class-title.png") no-repeat;
 }
 #blog-class #class-ul {
@@ -325,16 +325,16 @@
 }
 .nav-links .prev.page-numbers:active,
 .nav-links .next.page-numbers:active {
-    box-shadow: 1px 1px 14px rgba(0, 0, 0, 0.125) inset;
+    border: 1px solid #9c27b0 !important;
 }
 .nav-links .prev.page-numbers:hover,
 .nav-links .next.page-numbers:hover {
     background-color: #e7d9ff;
     border: 1px solid #e7d9ff;
-    transition: background-color 0.6s, border 0.6s;
-    -moz-transition: background-color 0.6s, border 0.6s;	/* Firefox 4 */
-    -webkit-transition: background-color 0.6s, border 0.6s;	/* Safari 和 Chrome */
-    -o-transition: background-color 0.6s, border 0.6s;
+    transition: background-color 0.6s;
+    -moz-transition: background-color 0.6s;	/* Firefox 4 */
+    -webkit-transition: background-color 0.6s;	/* Safari 和 Chrome */
+    -o-transition: background-color 0.6s;
 }
 
 .nav-links .next {
