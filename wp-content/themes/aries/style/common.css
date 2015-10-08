@@ -81,7 +81,7 @@
 #search {
     width: 310px;
     height: 50px;
-    border: 2px solid #7d5c99;
+    border: 2px solid #9937c7;
     box-sizing: border-box;
     position: absolute;
     top: -52px;
@@ -95,7 +95,7 @@
     padding: 6px 10px;
     line-height: 46px;
     font-size: 18px;
-    color: #7d5c99;
+    color: #9937c7;
 }
 #search-dec {
     float: left;
@@ -110,7 +110,7 @@
 #blog-class #class-title {
     margin-top: 4px;
     height: 67px;
-    border-bottom: 2px solid #7d5c99;
+    border-bottom: 2px solid #9937c7;
     background: url("../images/class-title.png") no-repeat;
 }
 #blog-class #class-ul {
