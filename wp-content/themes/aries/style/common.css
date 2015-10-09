@@ -173,10 +173,6 @@
 #to-top:hover {
 
 }
-
-
-
-
 #blog-list li {
     border-bottom: 1px dashed #d5d5d5;
     padding-bottom: 20px;
@@ -291,7 +287,6 @@
     padding-top: 2px;
 }
 
-
 /**********  分页  ***********/
 .pagination {
     padding-bottom: 30px;
@@ -342,4 +337,118 @@
 }
 .nav-links .next {
     float: right;
+}
+
+/**comments*/
+.comments-title {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: normal;
+    border-bottom: 1px dotted #ddd;
+    line-height: 34px;
+}
+.comment-list  li {
+    padding: 15px 10px;
+}
+.comment-list  > li {
+    border-bottom: 1px dotted #ddd;
+}
+.comment-list > li:hover {
+    background: #f5f8fa;
+}
+.comment-list .comment-author {
+    color: #ff2222;
+}
+
+.comment-list .fn {
+    font-weight: normal;
+    vertical-align: top;
+    color: #ff2222;
+}
+.comment-list .comment-body {
+    position: relative;
+    padding-left: 60px;
+}
+.comment-list .comment-author-avatar {
+    position: absolute;
+    left: 0;
+    height: 45px;
+    width: 45px;
+    float: left;
+    background: url(../images/avatar-blank.png) no-repeat center;
+}
+.comment-list .comment-content-wrap {
+}
+.comment-list .comment-date {
+    padding: 5px 0;
+    font-size: 14px;
+    color: #bdbdbd;
+}
+.comment-list .reply {
+    margin-left: 10px;
+    color: #ff2e2e;
+    visibility: hidden;
+}
+.comment-list li:hover > .comment-body .reply {
+    visibility: visible;
+}
+.comment-list .children {
+    margin-left: 25px;
+}
+.comment-respond {
+    margin: 10px 0 30px 0;
+}
+.comment-form > p {
+    margin-top: 22px;
+}
+.comment-form .required {
+    color: #ff2222;
+}
+.comment-form label {
+    display: inline-block;
+    width: 80px;
+}
+.comment-form .comment-form-comment label {
+    vertical-align: top;
+}
+.comment-form input {
+    width: 300px;
+    height: 34px;
+    line-height: 34px;
+    padding-left: 5px;
+    border: 1px solid #ddd;
+}
+.comment-form textarea {
+    border: 1px solid #ddd;
+    height: 120px;
+    width: 520px;
+    padding: 5px;
+}
+.comment-form .submit {
+    margin-left: 80px;
+}
+
+/************** search*************************/
+.search-header {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+.search-title {
+    float: left;
+    font-size: 24px;
+}
+.search-label {
+    color: #212121;
+    margin-right: 5px;
+}
+.search-keywords {
+    margin-left: 10px;
+    color: #ff2222;
+}
+.search-records {
+    float: right;
+}
+.search-empty {
+    margin-top: 15px;
 }
