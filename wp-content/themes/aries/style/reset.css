@@ -6,8 +6,8 @@ dd, form, input, select, textarea, fieldset, legend, table, tr, th, td {
 }
 body {
     font-size: 14px;
-    font-family: Arial, Hiragino Sans GB, Microsoft YaHei, SimSun;
-    color: #212121;
+    font-family: Arial,Hiragino Sans GB, Microsoft YaHei, SimSun;
+    color: #4a4a4a;
 }
 table {
     border-collapse: collapse;
@@ -43,4 +43,12 @@ select, optgroup, option {
 }
 iframe {
     display: block;
+}
+.clearfix {zoom:1;}
+.clearfix:after {
+    display:block;
+    content:' ';
+    clear:both;
+    line-height:0;
+    visibility:hidden;
 }
