@@ -47,4 +47,62 @@ function wpdocs_custom_excerpt_length( $length ) {
     return 100;
 }
 add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
+
+// 移除评论所需的url字段
+add_filter('comment_form_default_fields', 'comments_remove_url');
+
+function comments_remove_url($arg) {
+    $arg['url'] = '';
+    return $arg;
+}
+
+function comments_theme ($comment, $args, $depth) {
+    if ( 'div' == $args['style'] ) {
+        $tag = 'div';
+        $add_below = 'comment';
+    } else {
+        $tag = 'li';
+        $add_below = 'div-comment';
+    }
+?>
+<<?php echo $tag; ?> <?php comment_class( $comment->has_children ? 'parent' : '' ); ?> id="comment-<?php comment_ID(); ?>">
+<?php if ( 'div' != $args['style'] ) : ?>
+<div id="div-comment-<?php comment_ID(); ?>" class="comment-body clearfix">
+    <?php endif; ?>
+    <div class="comment-author-avatar"></div>
+    <div class="comment-content-wrap">
+
+        <?php printf( __( '<span class="fn">%s:</span>' ), get_comment_author_link() ); ?>
+        <span>
+            <?php echo $comment->comment_content ?>
+            <?php
+		comment_reply_link( array_merge( $args, array(
+			'add_below' => $add_below,
+            'depth'     => $depth,
+            'max_depth' => $args['max_depth'],
+            'before'    => '<span class="reply">',
+        'after'     => '</span>'
+            ) ) );
+            ?>
+        </span>
+        <div class="comment-date">
+            <?php
+				/* translators: 1: date, 2: time */
+				printf( __( '%1$s at %2$s' ), get_comment_date(),  get_comment_time() ); ?><?php edit_comment_link( __( '(Edit)' ), '&nbsp;&nbsp;', '' );
+			?>
+        </div>
+
+    <?php if ( '0' == $comment->comment_approved ) : ?>
+    <em class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.' ) ?></em>
+    <br />
+    <?php endif; ?>
+
+
+
+    </div>
+    <?php if ( 'div' != $args['style'] ) : ?>
+        </div>
+    <?php endif; ?>
+<?php
+}
 ?>

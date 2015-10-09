@@ -13,7 +13,7 @@ Template Name:nav
             <?php
                 $items = wp_get_nav_menu_items('top-menu', array());
                 foreach($items as $key => $item) {
-                    echo '<li><a class="wave" href="'.$item->url.'" id="nav-'.$item->attr_title.'"></a></li>';
+                    echo '<li><a class="wave wave-dark" href="'.$item->url.'" id="nav-'.$item->attr_title.'"></a></li>';
                 }
             ?>
         </ul>

@@ -16,9 +16,9 @@ Template Name:search
 ?>
 <div class="middle">
     <div id="cont-left">
-        <div style="overflow: hidden;margin: 15px 0">
-            <div style="float: left;">SEARCH/<?php echo $_GET['s']?></div>
-            <div style="float: right;">
+        <div class="search-header clearfix">
+            <div class="search-title"><span class="search-label">SEARCH</span>/<span class="search-keywords">"<?php echo $_GET['s']?>"</span></div>
+            <div class="search-records">
                 <?php
                     global $wp_query;
                     echo $wp_query->found_posts . ' 条记录';
@@ -27,7 +27,7 @@ Template Name:search
         </div>
         <ul id="blog-list">
             <?php
-            if ( have_posts() ):
+            if ( have_posts() ) {
                 while ( have_posts() ) : the_post();
                     get_template_part('content', 'list');
                 endwhile;
@@ -35,8 +35,10 @@ Template Name:search
                 the_posts_pagination( array(
 				    'prev_text'          => 'Prev',
                     'next_text'          => 'Next'
-            ) );
-            endif;
+                ) );
+            } else {
+                echo '<div class="search-empty">没有找到符合条件的结果!</div>';
+            }
             ?>
         </ul>
 
