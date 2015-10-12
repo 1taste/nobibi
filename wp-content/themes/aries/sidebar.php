@@ -1,10 +1,8 @@
 <div id="cont-right">
-    <div id="search">
-        <form action="<?php echo home_url('/');?>" method="get" id="searchForm">
-            <input type="text" placeholder="查找文章" name="s" >
-            <span id="search-dec"></span>
-        </form>
-    </div>
+    <form action="<?php echo home_url('/');?>" method="get" id="searchForm">
+        <input type="text" placeholder="查找文章" name="s" id="search" >
+        <span id="search-dec"></span>
+    </form>
     <div id="blog-class">
         <div id="class-title"></div>
         <ul id="class-ul">
