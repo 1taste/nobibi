@@ -17,7 +17,7 @@ Template Name:search
 <div class="middle">
     <div id="cont-left">
         <div class="search-header clearfix">
-            <div class="search-title"><span class="search-label">SEARCH</span>/<span class="search-keywords">"<?php echo $_GET['s']?>"</span></div>
+            <div class="search-title"><span class="search-label">search</span>/<span class="search-keywords">"<?php echo $_GET['s']?>"</span></div>
             <div class="search-records">
                 <?php
                     global $wp_query;

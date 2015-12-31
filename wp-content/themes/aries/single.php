@@ -32,9 +32,12 @@
                 <?php the_content();?>
             </div>
             <div class="p-updown">
-                <?php previous_post_link('上一篇：&nbsp;%link');?>
-                <br>
-                <?php next_post_link('下一篇：&nbsp;%link');?>
+                <span class="p-up">
+                    <?php previous_post_link('上一篇：&nbsp;%link');?>
+                </span>
+                <span class="p-down">
+                    <?php next_post_link('下一篇：&nbsp;%link');?>
+                </span>
             </div>
             <?php
                 $withcomments = "1";

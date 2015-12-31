@@ -54,6 +54,8 @@ body {
     font-size: 24px;
     height: 46px;
     width: 160px;
+    border-radius: 46px;
+    overflow: hidden;
 }
 #nav li a#nav-home {
     background-image: url("../images/nav-home.png");
@@ -226,15 +228,21 @@ body {
     text-align: justify;
 }
 .p-updown {
-    background: #f5f5f5;
-    padding: 9px 0;
+    background: #F0F0F0;
+    padding: 10px 0px;
     margin-top: 20px;
     text-align: right;
+    overflow: hidden;
 }
 .p-updown a {
     color: #1369BF;
-    font-size: 16px;
-    padding-right: 20px;
+    font-size: 14px;
+}
+.p-updown a:hover {
+    text-decoration: underline;
+}
+.p-updown .p-up {
+    float: left;
 }
 .p-comment {
     overflow: hidden;
