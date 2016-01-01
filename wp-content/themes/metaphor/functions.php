@@ -16,7 +16,8 @@ register_nav_menus( array(
 
 // 添加特色图像功能
 add_theme_support('post-thumbnails');
-set_post_thumbnail_size(680, 200, true); // 图片宽度与高度
+
+//set_post_thumbnail_size(700, 300, true);
 
 //统计文章访问
 function record_visitors(){
@@ -44,7 +45,7 @@ function post_views($echo = 1){
 
 // 设置摘要长度
 function wpdocs_custom_excerpt_length( $length ) {
-    return 100;
+    return 140;
 }
 add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
 

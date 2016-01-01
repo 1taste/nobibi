@@ -5,18 +5,29 @@ Template Name:content-list
 ?>
 
 <li>
-    <?php if (has_post_thumbnail()) {the_post_thumbnail();}?>
+    <?php if (has_post_thumbnail()) {the_post_thumbnail(array(700,430));}?>
     <div class="p-title">
-        <p class="p-title-text"><span><?php the_title()?></span></p>
+        <p class="p-title-text"><a href="<?php echo get_the_permalink()?>"><?php the_title()?></a></p>
         <p class="p-title-info">
-            <span><?php the_author()?>&nbsp;发表于</span>
             <span>
+                <i class="iconfont icon-history"></i>
                 <?php
-                 the_date();
-                 echo '&nbsp;';
-                 the_time();
-                ?>
+                 the_date();?>
             </span>
+            <span>
+                <i class="iconfont icon-user"></i>
+                <?php
+                 the_author();?>
+            </span>
+            <span>
+                <i class="iconfont icon-file-open"></i>
+                <?php $cat = get_the_category(); echo $cat[0]->cat_name?>
+            </span>
+            <span>
+                <i class="iconfont icon-sms"></i>
+                <?php echo $post->comment_count ?>
+            </span>
+
         </p>
     </div>
 
@@ -26,7 +37,6 @@ Template Name:content-list
     </div>
 
     <div class="p-action">
-        <a href="<?php echo get_permalink()?>" class="btn btn-large btn-primary wave">继续阅读</a>
-        <span><i class="iconfont icon-yulan"></i><?php post_views();?>&nbsp;&nbsp;<i class="iconfont icon-pinglun"></i><?php echo $post->comment_count ?></span>
+        <a href="<?php echo get_permalink()?>">继续阅读</a>
     </div>
 </li>
