@@ -10,6 +10,7 @@ if ( post_password_required() ) {
 	<?php if ( have_comments() ) : ?>
 
 	<h2 class="comments-title">
+    <i class="iconfont icon-sms"></i>
     <?php
         echo get_comments_number() .'条评论'
 

@@ -23,10 +23,11 @@ Template Name:content-list
                 <i class="iconfont icon-file-open"></i>
                 <?php $cat = get_the_category(); echo $cat[0]->cat_name?>
             </span>
-            <span>
+
+            <a href="<?php echo get_the_permalink()?>#comments">
                 <i class="iconfont icon-sms"></i>
                 <?php echo $post->comment_count ?>
-            </span>
+            </a>
 
         </p>
     </div>

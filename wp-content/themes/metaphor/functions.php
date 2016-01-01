@@ -73,8 +73,14 @@ function comments_theme ($comment, $args, $depth) {
     <div class="comment-author-avatar"></div>
     <div class="comment-content-wrap">
 
-        <?php printf( __( '<span class="fn">%s:</span>' ), get_comment_author_link() ); ?>
-        <span>
+        <?php printf( __( '<span class="fn">%s</span>' ), get_comment_author_link() ); ?>
+        <span class="comment-date">
+            <?php
+				/* translators: 1: date, 2: time */
+				printf( __( '%1$s at %2$s' ), get_comment_date(),  get_comment_time() ); ?><?php edit_comment_link( __( '(Edit)' ), '&nbsp;&nbsp;', '' );
+			?>
+        </span>
+        <div class="comment-text">
             <?php echo $comment->comment_content ?>
             <?php
 		comment_reply_link( array_merge( $args, array(
@@ -85,13 +91,8 @@ function comments_theme ($comment, $args, $depth) {
         'after'     => '</span>'
             ) ) );
             ?>
-        </span>
-        <div class="comment-date">
-            <?php
-				/* translators: 1: date, 2: time */
-				printf( __( '%1$s at %2$s' ), get_comment_date(),  get_comment_time() ); ?><?php edit_comment_link( __( '(Edit)' ), '&nbsp;&nbsp;', '' );
-			?>
         </div>
+
 
     <?php if ( '0' == $comment->comment_approved ) : ?>
     <em class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.' ) ?></em>

@@ -14,20 +14,18 @@
     <div class="content">
         <?php if(have_posts()) : the_post();?>
             <div class="crumbs">Nobibi > <?php $cat = get_the_category(); echo $cat[0]->cat_name?> > <?php the_title();?></div>
-            <div class="p-title">
+            <div class="article-title">
                 <h3><?php the_title();?></h3>
-                <p class="sp-title-info">
+                <p class="article-title-info">
                     <span><?php the_author()?>&nbsp;&nbsp;</span>
                     <span>
                         <?php
                              the_date();
-                             echo '&nbsp;';
-                             the_time();
                         ?>
                     </span>
                 </p>
             </div>
-            <?php if (has_post_thumbnail()) {the_post_thumbnail();}?>
+            <?php if (has_post_thumbnail()) {the_post_thumbnail(array(968,550));}?>
             <div class="p-text">
                 <?php the_content();?>
             </div>

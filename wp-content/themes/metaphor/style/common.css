@@ -245,26 +245,29 @@ body {
     overflow: hidden;
 }
 
-.p-title-info > span > i {
+.p-title-info i {
+    position: relative;
+    top: 1px;
     color: #AAAAAA;
+    margin-right: 4px;
 }
-.p-title-info > span {
+.p-title-info > span,
+.p-title-info > a{
     padding: 0 16px;
     border-left: 2px solid #ddd;
+    position: relative;
+}
+.p-title-info > a:hover i,
+.p-title-info > a:hover {
+    color: #9C27B0;
+    transition: all .2s ease-in;
 }
 .p-title-info > span:first-child {
     padding-left: 0;
     border-left: none;
 }
-.p-title-info,
-.sp-title-info {
+.p-title-info{
     color: #9a9a9a;
-}
-.sp-title-info {
-    position: absolute;
-    top: 10px;
-    right: 0;
-    font-size: 14px;
 }
 .p-ahead {
     padding: 0 32px;
@@ -281,9 +284,8 @@ body {
     transition: all .2s ease-in;
 }
 
-.p-text p {
+.p-text {
     line-height: 26px;
-    color: #212121;
     text-align: justify;
 }
 .p-updown {
@@ -379,12 +381,13 @@ body {
 }
 .nav-links .prev.page-numbers:hover,
 .nav-links .next.page-numbers:hover {
-    background-color: #e7d9ff;
-    border: 1px solid #e7d9ff;
-    transition: background-color 0.6s;
-    -moz-transition: background-color 0.6s;	/* Firefox 4 */
-    -webkit-transition: background-color 0.6s;	/* Safari 和 Chrome */
-    -o-transition: background-color 0.6s;
+    color: #fff;
+    background-color: #9c27b0;
+    border: 1px solid #9c27b0;
+    transition: background-color 0.3s;
+    -moz-transition: background-color 0.3s;	/* Firefox 4 */
+    -webkit-transition: background-color 0.3s;	/* Safari 和 Chrome */
+    -o-transition: background-color 0.3s;
 }
 .nav-links .next {
     float: left;
@@ -396,10 +399,18 @@ body {
 /**comments*/
 .comments-title {
     margin-top: 10px;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: normal;
     border-bottom: 1px solid #eee;
-    line-height: 34px;
+    line-height: 56px;
+    position: relative;
+}
+.comments-title i {
+    position: relative;
+    top: 3px;
+    font-size: 24px;
+    color: #bdbdbd;
+    margin-right: 8px;
 }
 .comment-list  li {
     padding: 16px 0px;
@@ -413,9 +424,9 @@ body {
 }
 
 .comment-list .fn {
-    font-weight: normal;
+    font-weight: bold;
     vertical-align: top;
-    color: #ff2222;
+
 }
 .comment-list .comment-body {
     position: relative;
@@ -432,9 +443,13 @@ body {
 .comment-list .comment-content-wrap {
 }
 .comment-list .comment-date {
-    padding: 5px 0;
+    padding: 5px 8px;
     font-size: 14px;
     color: #bdbdbd;
+}
+.comment-list .comment-text {
+    margin: 8px 0;
+    line-height: 26px;
 }
 .comment-list .reply {
     margin-left: 10px;
@@ -486,7 +501,7 @@ body {
 /************** search *************************/
 .search-header {
     border-bottom: 1px solid #ddd;
-    padding-bottom: 5px;
+    padding-bottom: 8px;
     margin-bottom: 20px;
 }
 .search-title {
@@ -494,12 +509,12 @@ body {
     font-size: 24px;
 }
 .search-label {
-    color: #212121;
+    color: #4a4a4a;
     margin-right: 5px;
 }
 .search-keywords {
     margin-left: 10px;
-    color: #ff2222;
+    color: #9c27b0;
 }
 .search-records {
     float: right;
@@ -507,7 +522,9 @@ body {
 .search-empty {
     margin-top: 15px;
 }
-
+.search-sep {
+    padding: 0 5px;
+}
 /************** about ***************/
 
 footer {
@@ -558,7 +575,10 @@ article h3 {
     line-height: 40px;
     margin: 48px 0 24px 0;
 }
-
+article .article-title-info {
+    color: #9a9a9a;
+    margin: 16px 0;
+}
 
 
 /*transition.css*/
