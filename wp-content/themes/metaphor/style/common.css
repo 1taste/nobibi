@@ -7,7 +7,7 @@ dd, form, input, select, textarea, fieldset, legend, table, tr, th, td {
 }
 body {
     font-size: 14px;
-    font-family: Roboto,Hiragino Sans GB, Microsoft YaHei, SimSun;
+    font-family: robotolight,Hiragino Sans GB, Microsoft YaHei, SimSun;
     color: #4a4a4a;
 }
 table {
@@ -82,16 +82,15 @@ body {
 }
 #logo {
     float: left;
-    width: 162px;
-    /*height: 130px;*/
-    /*background-image: url("../images/logo.png");*/
-    background-repeat: no-repeat;
+    margin-top: 28px;
+    width: 240px;
+    height: 46px;
+    background: url(../images/logo.png) no-repeat ;
 }
 #nav{
     float: right;
     height: 80px;
     box-sizing: border-box;
-    padding-top: 28px;
 }
 #nav li {
     float: left;
@@ -101,10 +100,11 @@ body {
 #nav li a {
     display: block;
     font-size: 20px;
-    height: 46px;
-    line-height: 46px;
-    width: 160px;
+    height: 80px;
+    width: 140px;
+    padding-top: 36px;
     text-align: center;
+    box-sizing: border-box;
 }
 
 .middle {
@@ -143,7 +143,8 @@ body {
 }
 #search-btn {
     position: absolute;
-    right: 1px;
+    top: 0;
+    right: 0;
     width: 46px;
     height: 46px;
     background: url("../images/search-dec.png") no-repeat;
@@ -197,22 +198,6 @@ body {
     font-size: 15px;
     color: #bdbdbd;
     font-weight: bold;
-}
-#more-wrap {
-    position: relative;
-    float: right;
-    padding-bottom: 40px;
-}
-#more {
-    display: inline-block;
-    color: #1369BF;
-    font-size: 18px;
-    padding: 0 2px;
-    cursor: pointer;
-    border-bottom: 1px solid transparent;
-}
-#more:hover {
-    border-bottom: 1px solid #1369BF;
 }
 
 #blog-list li {
@@ -419,10 +404,6 @@ body {
     border-bottom: 1px solid #eee;
 }
 
-.comment-list .comment-author {
-    color: #ff2222;
-}
-
 .comment-list .fn {
     font-weight: bold;
     vertical-align: top;
@@ -453,7 +434,7 @@ body {
 }
 .comment-list .reply {
     margin-left: 10px;
-    color: #ff2e2e;
+    color: #9C27B0;
     visibility: hidden;
 }
 .comment-list li:hover > .comment-body .reply {
@@ -498,7 +479,7 @@ body {
     margin-left: 80px;
 }
 
-/************** search *************************/
+/************** search page*************************/
 .search-header {
     border-bottom: 1px solid #ddd;
     padding-bottom: 8px;
@@ -541,7 +522,7 @@ footer {
     left: 0;
 }
 footer span {
-    margin-right: 16px;
+    margin-right: 24px;
 }
 
 /*文章页*/

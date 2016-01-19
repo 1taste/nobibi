@@ -3,7 +3,7 @@
 <meta name="renderer" content="webkit">
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 <link href="<?php bloginfo('template_url')?>/style/fonts/iconfont/iconfont.css" rel="stylesheet">
-<link href="<?php bloginfo('template_url')?>/style/fonts/roboto/thin/stylesheet.css" rel="stylesheet">
+<link href="<?php bloginfo('template_url')?>/style/fonts/roboto/light/stylesheet.css" rel="stylesheet">
 <!--
 <link href='https://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
 -->
