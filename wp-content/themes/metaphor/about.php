@@ -48,11 +48,14 @@ Template Name:about
             height: 180px;
             width: 180px;
             background: url(<?php bloginfo('template_url')?>/images/ani-circle.png)  no-repeat;
-            padding: 40px;
             box-sizing: border-box;
             margin-bottom: 24px;
+            padding: 4px;
+            overflow: hidden;
         }
         .avatar img {
+            height: 171px;
+            width: 171px;
             display: none;
         }
         .info {
@@ -71,11 +74,15 @@ Template Name:about
             border-bottom: 1px solid #9C27B0;
             padding-bottom: 8px;
             font-weight: bold;
+            color: #212121;
         }
         .desc {
             width: 220px;
             text-align: center;
             margin: 32px auto;
+        }
+        .desc p {
+            padding-bottom: 4px;
         }
     </style>
 
@@ -89,24 +96,26 @@ Template Name:about
     <div class="c-wrap">
         <div class="info">
             <div class="avatar" >
-                <img src="<?php bloginfo('template_url')?>/images/avatar1.jpg" >
+                <img src="<?php bloginfo('template_url')?>/images/avatar1.png" >
             </div>
             <div class="author">
                 Wizard
             </div>
             <div class="desc">
-                爱玄学, 爱处女座
+                <p>爱玄学, 爱处女座</p>
+                <p>nobibi1024@163.com</p>
             </div>
         </div>
         <div class="info">
             <div class="avatar">
-                <img src="<?php bloginfo('template_url')?>/images/avatar1.jpg" >
+                <img src="<?php bloginfo('template_url')?>/images/avatar2.png" >
             </div>
             <div class="author">
                 Koppia
             </div>
             <div class="desc">
-                爱艺术, 爱天马行空
+                <p>爱艺术, 爱天马行空</p>
+                <p>nobibi1024@163.com</p>
             </div>
         </div>
         <div class="separator"></div>
