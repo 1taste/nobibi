@@ -4,6 +4,26 @@
     <?php
     get_header();
 ?>
+<link href="<?php bloginfo('template_url')?>/plugin/syntaxhighlighter/styles/shCore.css" rel="stylesheet">
+<link href="<?php bloginfo('template_url')?>/plugin/syntaxhighlighter/styles/shThemeRDark.css" rel="stylesheet">
+<script src="<?php bloginfo('template_url')?>/plugin/syntaxhighlighter/scripts/shCore.js"></script>
+<script src="<?php bloginfo('template_url')?>/plugin/syntaxhighlighter/scripts/shBrushJScript.js"></script>
+<script>
+    SyntaxHighlighter.config.clipboardSwf = '<?php bloginfo('template_url')?>/plugin/syntaxhighlighter/scripts/clipboard.swf';
+    SyntaxHighlighter.config.strings = {
+        expandSource : '展开代码',
+        viewSource : null,
+        copyToClipboard : '复制代码',
+        copyToClipboardConfirmation : '代码复制成功',
+        print : null,
+        help: null,
+        alert: '',
+        noBrush: '不能找到刷子: ',
+        brushNotHtmlScript: '刷子没有配置html-script选项',
+        aboutDialog: '<div></div>'
+    };
+    SyntaxHighlighter.all();
+</script>
 </head>
 <body>
 <?php
@@ -42,4 +62,5 @@
 
     </div>
 </article>
+
 <?php get_footer();?>
