@@ -5,9 +5,11 @@
     get_header();
 ?>
 <link href="<?php bloginfo('template_url')?>/plugin/syntaxhighlighter/styles/shCore.css" rel="stylesheet">
-<link href="<?php bloginfo('template_url')?>/plugin/syntaxhighlighter/styles/shThemeRDark.css" rel="stylesheet">
+<link href="<?php bloginfo('template_url')?>/plugin/syntaxhighlighter/styles/shThemeEclipse.css" rel="stylesheet">
 <script src="<?php bloginfo('template_url')?>/plugin/syntaxhighlighter/scripts/shCore.js"></script>
 <script src="<?php bloginfo('template_url')?>/plugin/syntaxhighlighter/scripts/shBrushJScript.js"></script>
+<script src="<?php bloginfo('template_url')?>/plugin/syntaxhighlighter/scripts/shBrushXml.js"></script>
+<script src="<?php bloginfo('template_url')?>/plugin/syntaxhighlighter/scripts/shBrushCss.js"></script>
 <style>
     body {
         position: absolute;
