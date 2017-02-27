@@ -161,6 +161,7 @@ header.scroll #logo {
     text-align: center;
     box-sizing: border-box;
     color: #FFFFFF;
+    text-transform: uppercase;
 }
 #nav li a:hover::after {
     transform: scaleX(1);
