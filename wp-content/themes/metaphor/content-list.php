@@ -5,22 +5,24 @@ Template Name:content-list
 ?>
 
 <li>
-    <?php if (has_post_thumbnail()) {the_post_thumbnail(array(700,430));}?>
+    <?php if (has_post_thumbnail()) {the_post_thumbnail(array(700,467));}?>
     <div class="p-title">
+
         <p class="p-title-text"><a href="<?php echo get_the_permalink()?>"><?php the_title()?></a></p>
         <p class="p-title-info">
             <span>
                 <i class="iconfont icon-history"></i>
                 <?php
-                 the_date();?>
+                 the_time('m-d,Y');?>
             </span>
             <span>
                 <i class="iconfont icon-user"></i>
+                BY
                 <?php
                  the_author();?>
             </span>
             <span>
-                <i class="iconfont icon-file-open"></i>
+                <i class="iconfont icon-tag"></i>
                 <?php $cat = get_the_category(); echo $cat[0]->cat_name?>
             </span>
 
@@ -38,6 +40,6 @@ Template Name:content-list
     </div>
 
     <div class="p-action">
-        <a href="<?php echo get_permalink()?>">继续阅读</a>
+        <a href="<?php echo get_permalink()?>">READ MORE</a>
     </div>
 </li>

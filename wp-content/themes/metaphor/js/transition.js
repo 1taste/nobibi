@@ -24,4 +24,20 @@ $(function () {
         }).show();
         $ripple.addClass('transition-wave');
     });
+
+    (function() {
+        /****************导航效果start****************/
+        var $header = $('header');
+        window.onscroll = function () {
+            var t = document.documentElement.scrollTop || document.body.scrollTop;
+            if (t > 80) {
+                if (!$header.hasClass('scroll')) {
+                    $header.addClass('scroll')
+                }
+            }else {
+                $header.removeClass('scroll');
+            }
+        }
+        /****************导航效果end****************/
+    })();
 });

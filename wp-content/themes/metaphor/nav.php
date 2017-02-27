@@ -4,9 +4,9 @@ Template Name:nav
 */
 ?>
 
-<div class="top">
-    <div id="top-info">
-        <div id="logo"></div>
+<header id="header">
+    <div class="header-main">
+        <div id="logo">Nobibi</div>
         <ul id="nav">
 
             <?php
@@ -17,4 +17,4 @@ Template Name:nav
             ?>
         </ul>
     </div>
-</div>
+</header>

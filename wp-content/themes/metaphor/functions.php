@@ -17,7 +17,7 @@ register_nav_menus( array(
 // 添加特色图像功能
 add_theme_support('post-thumbnails');
 
-//set_post_thumbnail_size(700, 300, true);
+//set_post_thumbnail_size(700, 430, true);
 
 //统计文章访问
 function record_visitors(){

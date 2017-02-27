@@ -16,7 +16,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 .icon-file-open:before { content: "\e602"; }
-.icon-user:before { content: "\e603"; }
+.icon-tag:before { content: "\e60d"; }
+.icon-user:before { content: "\e643"; }
 .icon-sms:before { content: "\e600"; }
 .icon-history:before { content: "\e605"; }
 .icon-angle-right:before { content: "\e601"; }
+

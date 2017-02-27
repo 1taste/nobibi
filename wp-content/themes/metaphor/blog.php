@@ -26,8 +26,8 @@ Template Name:blog
             endwhile;
 
             the_posts_pagination( array(
-            'prev_text'          => 'Prev',
-            'next_text'          => 'Next'
+            'prev_text'          => 'PREV',
+            'next_text'          => 'NEXT'
             ) );
             endif;
          ?>
