@@ -10,12 +10,16 @@ Template Name:about
     get_header();
 ?>
     <style>
+        body {
+            position: absolute;
+        }
         .about-main {
             margin: 48px 0;
             padding: 48px 0;
             width: 100%;
-            background: #eee;
+            background: #ddd;
             box-sizing: border-box;
+            margin-top: 128px;
         }
         .middle {
             margin: 0 auto;
@@ -69,9 +73,9 @@ Template Name:about
         .author {
             font-size: 16px;
             text-align: center;
-            width: 220px;
+            width: 190px;
             margin: 0 auto;
-            border-bottom: 1px solid #9C27B0;
+            border-bottom: 1px solid #7049BA;
             padding-bottom: 8px;
             font-weight: bold;
             color: #212121;
@@ -96,10 +100,10 @@ Template Name:about
     <div class="c-wrap">
         <div class="info">
             <div class="avatar" >
-                <img src="<?php bloginfo('template_url')?>/images/avatar1.png" >
+               <!-- <img src="<?php bloginfo('template_url')?>/images/avatar1.png" >-->
             </div>
             <div class="author">
-                Wizard
+                一味
             </div>
             <div class="desc">
                 <p>爱玄学, 爱处女座</p>
@@ -108,10 +112,10 @@ Template Name:about
         </div>
         <div class="info">
             <div class="avatar">
-                <img src="<?php bloginfo('template_url')?>/images/avatar2.png" >
+                <!--<img src="<?php bloginfo('template_url')?>/images/avatar2.png" >-->
             </div>
             <div class="author">
-                Koppia
+                幽南
             </div>
             <div class="desc">
                 <p>爱艺术, 爱天马行空</p>

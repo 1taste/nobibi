@@ -6,7 +6,7 @@ Template Name:nav
 
 <header id="header">
     <div class="header-main">
-        <div id="logo">Nobibi</div>
+        <div id="logo">NOBIBI</div>
         <ul id="nav">
 
             <?php

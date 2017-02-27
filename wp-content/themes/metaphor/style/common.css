@@ -66,7 +66,7 @@ body {
     box-sizing: border-box;
     padding-bottom: 100px;
     position: relative;
-    background: #f9f9f9;
+    background: #f6f6f6;
 }
 .mask::before {
     background-color: rgba(0, 0, 0, 0.35);
@@ -83,6 +83,7 @@ body {
 }
 header {
     position: fixed;
+    z-index: 99;
     left: 0;
     right: 0;
     top: 0;
@@ -97,20 +98,36 @@ header {
     width: 1080px;
     height: 100%;
 }
+#page-about header,
+#page-blog header {
+    background-color: #7049BA;
+}
+#page-about header.scroll #nav a,
+#page-blog header.scroll #nav a{
+    color: #fff;
+}
+
 #logo {
     float: left;
     margin-top: 12px;
     width: 240px;
     height: 46px;
-    font-size: 36px;
-    letter-spacing: 3px;
+    font-size: 26px;
+    letter-spacing: 2px;
     color: #FFFFFF;
     /*background: url(../images/logo.png) no-repeat ;*/
+}
+header.scroll #logo {
+    color: #444;
+}
+#page-about header.scroll #logo,
+#page-blog header.scroll #logo{
+    color: #fff;
 }
 #nav{
     float: right;
     height: 60px;
-    padding: 10px 0;
+    padding: 12px 0;
     box-sizing: border-box;
 }
 #nav li {
@@ -138,8 +155,8 @@ header {
     position: relative;
     display: block;
     font-size: 16px;
-    height: 38px;
-    line-height: 38px;
+    height: 36px;
+    line-height: 36px;
     width: 110px;
     text-align: center;
     box-sizing: border-box;
@@ -153,11 +170,14 @@ header.scroll {
     background-color: #fff;
     color: #444444;
     box-shadow: 0 10px 20px -12px rgba(0, 0, 0, 0.42), 0 3px 20px 0 rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+    transition: all .4s ease;
+}
+header.scroll #nav a {
+    color: #444;
 }
 
-
 .middle {
-    margin: 64px auto;
+    margin: 128px auto;
     width: 1080px;
     margin-bottom: 80px;
 }
@@ -210,7 +230,7 @@ header.scroll {
     bottom: 0;
     left: 50%;
     width: 0;
-    background: #9C27B0;
+    background: #7049BA;
     transition: all .2s ease-in;
 }
 #search:focus+span+.search-trans {
@@ -234,7 +254,7 @@ header.scroll {
     width: 140px;
     height: 52px;
     line-height: 52px;
-    color: #9C27B0;
+    color: #7049BA;
     font-size: 16px;
     letter-spacing: 1px;
 }
@@ -254,7 +274,7 @@ header.scroll {
     background-color: #FFFFFF;
     border-radius: 2px;
     box-sizing: border-box;
-    margin: 32px 0;
+    margin-bottom: 32px;
 }
 #blog-list li > img {
     display: block;
@@ -273,7 +293,7 @@ header.scroll {
     margin-bottom: 8px;
 }
 .p-title-text a:hover {
-    color:#9C27B0 ;
+    color:#7049BA ;
     transition: all .2s ease-out;
 }
 .p-title-info {
@@ -295,7 +315,7 @@ header.scroll {
 }
 .p-title-info > a:hover i,
 .p-title-info > a:hover {
-    color: #9C27B0;
+    color: #7049BA;
     transition: all .2s ease-in;
 }
 .p-title-info > span:first-child {
@@ -327,12 +347,13 @@ header.scroll {
 }
 .p-action a:hover {
     color: #fff;
-    background-color: #9C27B0;
-    border-color: #9C27B0;
+    background-color: #7049BA;
+    border-color: #7049BA;
     transition: all .2s ease-out;
 }
 
 .p-text {
+    padding-top: 32px;
     line-height: 30px;
     text-align: justify;
     font-size: 15px;
@@ -414,9 +435,9 @@ header.scroll {
     height: 42px;
     width: 140px;
     background-color: transparent;
-    border: 2px solid #9c27b0;
+    border: 2px solid #7049BA;
     border-radius: 2px;
-    color: #9c27b0;
+    color: #7049BA;
     text-align: center;
     font-size: 14px;
     font-weight: bold;
@@ -429,13 +450,13 @@ header.scroll {
 }
 .nav-links .prev.page-numbers:active,
 .nav-links .next.page-numbers:active {
-    border: 2px solid #9c27b0 !important;
+    border: 2px solid #7049BA !important;
 }
 .nav-links .prev.page-numbers:hover,
 .nav-links .next.page-numbers:hover {
     color: #fff;
-    background-color: #9c27b0;
-    border: 2px solid #9c27b0;
+    background-color: #7049BA;
+    border: 2px solid #7049BA;
     transition: background-color 0.3s;
     -moz-transition: background-color 0.3s;	/* Firefox 4 */
     -webkit-transition: background-color 0.3s;	/* Safari 和 Chrome */
@@ -501,7 +522,7 @@ header.scroll {
 }
 .comment-list .reply {
     margin-left: 10px;
-    color: #9C27B0;
+    color: #7049BA;
     visibility: hidden;
 }
 .comment-list li:hover > .comment-body .reply {
@@ -562,7 +583,7 @@ header.scroll {
 }
 .search-keywords {
     margin-left: 10px;
-    color: #9c27b0;
+    color: #7049BA;
 }
 .search-records {
     float: right;
@@ -595,10 +616,33 @@ footer span {
 /*文章页*/
 .article-bg {
     position: absolute;
-    top: 90px;
-    height: 360px;
+    top: 0px;
+    height: 65vh;
     width: 100%;
-    background-color: #3F51B5;
+    overflow: hidden;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.article-bg-meta {
+    position: absolute;
+    top: 56%;
+    margin-top: -100px;
+    height: 200px;
+    width: 100%;
+    text-align: center;
+    z-index: 97;
+}
+.article-bg-meta h3 {
+    text-align: center;
+    font-size: 48px;
+    font-weight: bold;
+    color: rgba(255,255,255,.9);
+    padding-bottom: 8px;
+}
+.article-bg-meta span {
+    color: #e5e5e5;
+    font-size: 16px;
 }
 article {
     position: relative;
@@ -611,6 +655,7 @@ article {
     box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);;
     box-sizing: border-box;
     padding: 80px 56px;
+    margin-top: 60vh;
     margin-bottom: 80px;
 }
 article .crumbs {

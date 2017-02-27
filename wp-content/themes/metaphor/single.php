@@ -8,6 +8,11 @@
 <link href="<?php bloginfo('template_url')?>/plugin/syntaxhighlighter/styles/shThemeRDark.css" rel="stylesheet">
 <script src="<?php bloginfo('template_url')?>/plugin/syntaxhighlighter/scripts/shCore.js"></script>
 <script src="<?php bloginfo('template_url')?>/plugin/syntaxhighlighter/scripts/shBrushJScript.js"></script>
+<style>
+    body {
+        position: absolute;
+    }
+</style>
 <script>
     SyntaxHighlighter.config.clipboardSwf = '<?php bloginfo('template_url')?>/plugin/syntaxhighlighter/scripts/clipboard.swf';
     SyntaxHighlighter.config.strings = {
@@ -29,12 +34,19 @@
 <?php
     get_template_part('nav');
 ?>
-<div class="article-bg"></div>
+<?php if(have_posts()) : the_post();?>
+<div class="article-bg mask" style="background-image: url(<?php if (has_post_thumbnail()) { echo  wp_get_attachment_url(get_post_thumbnail_id($post->ID));}?>)">
+    <div class="article-bg-meta">
+        <h3><?php the_title();?></h3>
+        <span>Published by <?php the_author()?>&nbsp;&nbsp;On</span>
+        <span><?php the_date();?></span>
+    </div>
+</div>
 <article>
     <div class="content">
-        <?php if(have_posts()) : the_post();?>
+
             <div class="crumbs">Nobibi > <?php $cat = get_the_category(); echo $cat[0]->cat_name?> > <?php the_title();?></div>
-            <div class="article-title">
+           <!-- <div class="article-title">
                 <h3><?php the_title();?></h3>
                 <p class="article-title-info">
                     <span><?php the_author()?>&nbsp;&nbsp;</span>
@@ -44,8 +56,8 @@
                         ?>
                     </span>
                 </p>
-            </div>
-            <?php if (has_post_thumbnail()) {the_post_thumbnail(array(968,550));}?>
+            </div>-->
+            <!--<?php if (has_post_thumbnail()) {the_post_thumbnail(array(968,550));}?>-->
             <div class="p-text">
                 <?php the_content();?>
             </div>
@@ -58,9 +70,9 @@
                 $withcomments = "1";
                 comments_template(); // 调用wp-comments.php 模板
             ?>
-        <?php endif;?>
+
 
     </div>
 </article>
-
+<?php endif;?>
 <?php get_footer();?>
