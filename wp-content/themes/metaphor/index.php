@@ -20,7 +20,7 @@
         z-index: 99;
         left: 50%;
         top: 50%;
-        margin-left: -300px;
+        margin-left: -350px;
         margin-top: -100px;
         width: 700px;
         height: 200px;
@@ -36,6 +36,8 @@
         font-size: 20px;
         color: #eee;
         word-spacing: 2px;
+        text-transform: uppercase;
+        background-color: rgba(255,255,255,.2);
     }
     .index-meta a {
         opacity: .9;
