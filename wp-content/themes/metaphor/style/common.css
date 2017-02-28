@@ -556,10 +556,10 @@ header.scroll #nav a {
     height: 34px;
     line-height: 34px;
     padding-left: 5px;
-    border: 1px solid #ddd;
+    border: 2px solid #ddd;
 }
 .comment-form textarea {
-    border: 1px solid #ddd;
+    border: 2px solid #ddd;
     height: 120px;
     width: 520px;
     padding: 5px;
