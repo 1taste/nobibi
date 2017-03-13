@@ -17,11 +17,12 @@
 </style>
 <script>
     SyntaxHighlighter.config.clipboardSwf = '<?php bloginfo('template_url')?>/plugin/syntaxhighlighter/scripts/clipboard.swf';
+    SyntaxHighlighter.defaults.gutter = false;
     SyntaxHighlighter.config.strings = {
         expandSource : '展开代码',
         viewSource : null,
         copyToClipboard : '复制代码',
-        copyToClipboardConfirmation : '代码复制成功',
+        copyToClipboardConfirmation : '复制好了',
         print : null,
         help: null,
         alert: '',
