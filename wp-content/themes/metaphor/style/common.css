@@ -659,6 +659,13 @@ article {
     margin-top: 60vh;
     margin-bottom: 80px;
 }
+article h1 {
+    border-bottom: 1px solid #eaeaea;
+    padding-bottom: 12px;
+}
+article h2 {
+   font-size: 1.3em;
+}
 article h1,
 article h2,
 article h3 {
@@ -682,6 +689,18 @@ article .crumbs {
     line-height: 20px;
     color: #757575;
     letter-spacing: 1px;
+}
+article table th {
+    background: #f5f6fa;
+}
+article table th,
+article table td {
+    padding: 4px 10px;
+    border: 1px solid #e0e0e0;
+    color: #4a4a4a;
+}
+article table tr:nth-child(2n+1) {
+    background-color: #f8f8f8;
 }
 article h3 {
     font-size: 28px;
