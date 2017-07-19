@@ -659,6 +659,18 @@ article {
     margin-top: 60vh;
     margin-bottom: 80px;
 }
+article ul {
+    list-style: disc inside none;
+}
+article a {
+    color: #1369BF;
+}
+article img {
+    max-width: 100%;
+}
+article a:hover {
+    text-decoration: underline;
+}
 article .crumbs {
     font-size: 14px;
     line-height: 20px;
