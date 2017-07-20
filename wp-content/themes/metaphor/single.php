@@ -21,8 +21,10 @@
 <div class="article-bg mask" style="background-image: url(<?php if (has_post_thumbnail()) { echo  wp_get_attachment_url(get_post_thumbnail_id($post->ID));}?>)">
     <div class="article-bg-meta">
         <h3><?php the_title();?></h3>
-        <span>Published by <?php the_author()?>&nbsp;&nbsp;On</span>
-        <span><?php the_date();?></span>
+        <span>Published by </span>
+        <span class="article-author"><?php the_author()?></span>
+        <span>on</span>
+        <span class="article-date"><?php the_date();?></span>
     </div>
 </div>
 <article>
