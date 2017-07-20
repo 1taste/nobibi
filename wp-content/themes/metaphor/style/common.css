@@ -618,7 +618,7 @@ footer span {
 .article-bg {
     position: absolute;
     top: 0px;
-    height: 65vh;
+    height: 67vh;
     width: 100%;
     overflow: hidden;
     background-position: center center;
@@ -653,10 +653,10 @@ article {
     background-color: #FFFFFF;
     width: 1080px;
     margin: 72px auto;
-    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);;
+    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
     box-sizing: border-box;
     padding: 80px 56px;
-    margin-top: 60vh;
+    margin-top: 57vh;
     margin-bottom: 80px;
 }
 article h1 {
