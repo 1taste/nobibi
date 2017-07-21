@@ -13,7 +13,7 @@ Template Name:content-list
             <span>
                 <i class="iconfont icon-history"></i>
                 <?php
-                 the_time('m-d,Y');?>
+                 the_time('m/d,Y');?>
             </span>
             <span>
                 <i class="iconfont icon-user"></i>
