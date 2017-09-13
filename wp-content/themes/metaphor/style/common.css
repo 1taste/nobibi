@@ -659,7 +659,6 @@ article {
     position: relative;
     border-radius: 3px;
     z-index: 2;
-    overflow: hidden;
     background-color: #FFFFFF;
     width: 1080px;
     margin: 72px auto;
