@@ -26,9 +26,18 @@ $(function () {
     });
 
     (function() {
-        /****************导航效果start****************/
-        var $header = $('header');
+        var $header = $('header'),
+            $toc = $('#toc_container'),
+            tocScrollTop;
         window.onscroll = function () {
+           fixedHeader();
+           if ($toc.length) {
+               fixedToc();
+           }
+        }
+        
+        // 固定header
+        function fixedHeader() {
             var t = document.documentElement.scrollTop || document.body.scrollTop;
             if (t > 80) {
                 if (!$header.hasClass('scroll')) {
@@ -38,6 +47,35 @@ $(function () {
                 $header.removeClass('scroll');
             }
         }
-        /****************导航效果end****************/
+
+        // 固定文章目录
+        function fixedToc() {
+            var scrollTop = $(document).scrollTop(),
+                offsetTop = $toc.offset().top - scrollTop;
+            if (offsetTop <= 20) {
+                if (!$toc.hasClass('toc-fixed')) {
+                    $toc.css({
+                        "position": "fixed",
+                        "top":"20px",
+                        "left": $toc.offset().left+"px"
+                    });
+                    $toc.addClass('toc-fixed');
+                    tocScrollTop =  scrollTop;
+                }
+            }
+            if (tocScrollTop > scrollTop) {
+                if ($toc.hasClass('toc-fixed')) {
+                    $toc.removeClass('toc-fixed')
+                    $toc.css({
+                        "position": "absolute",
+                        "left": "-200px",
+                        "top": "160px"
+                    });
+                    tocScrollTop = 0;
+                }
+            }
+        }
+
     })();
+
 });

@@ -13,16 +13,27 @@
     #toc_container {
         display: none;
     }
-    @media screen and (min-width: 1600px) {
+    @media (min-width: 1200px) {
+        article {
+            width: 840px;
+        }
         #toc_container {
             position: absolute;
             left: -200px;
             top: 160px;
             display: table;
             z-index: 999;
+            border: none;
+            background: transparent;
         }
-
     }
+    @media (min-width: 1600px) {
+        article {
+            width: 1080px;
+        }
+    }
+
+
 </style>
 
 </head>
@@ -73,27 +84,4 @@
     </div>
 </article>
 <?php endif;?>
-<script>
-    $(function () {
-        /****************文章目录锚点****************/
-
-        var $toc = $('#toc_container');
-        window.onscroll = function () {
-
-            var offsetTop = $toc.offset().top - $(document).scrollTop();
-            if (offsetTop <= 20) {
-                $toc.css({
-                    "position": "fixed",
-                    "top":"20px",
-                    "left": $toc.offset().left+"px"
-                });
-            }  else {
-                
-            }
-
-        }
-    });
-
-</script>
-
 <?php get_footer();?>
